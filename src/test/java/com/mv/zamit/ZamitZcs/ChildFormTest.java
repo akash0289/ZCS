@@ -14,6 +14,10 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import pageObject.ChildsInformation;
 import pageObject.HomePage1;
+import pageObject.ParentInformationPage;
+import pageObject.SaveMyAppPage;
+import pageObject.SelectYourChildProfile;
+import pageObject.SelectYourEthncityPage;
 
 
 public class ChildFormTest extends Base1 {
@@ -31,11 +35,10 @@ public class ChildFormTest extends Base1 {
 	}
 	
 	
-	@Test
+	/*@Test
 	public void verifyFormHeading() throws IOException, InterruptedException
 	{
-		 ChildFormTest u=new ChildFormTest();
-		 u.appLaunch();
+		 appLaunch();
 		 ChildsInformation lg = new ChildsInformation(driver);
 
 		String actualText=lg.formHeadingText().getText();
@@ -45,11 +48,11 @@ public class ChildFormTest extends Base1 {
 		System.out.println("Heading is same");
 		
 	}
-		@Test
+		
+	@Test
 	public void verifySaveButtonText() throws IOException, InterruptedException
 	{
-		 ChildFormTest u=new ChildFormTest();
-		 u.appLaunch();
+		 appLaunch();
 		 ChildsInformation lg = new ChildsInformation(driver);
 
 		String actualText=lg.saveExitButton().getText();
@@ -62,8 +65,7 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyFirstName() throws InterruptedException, IOException
 	{
-		 ChildFormTest u=new ChildFormTest();
-		 u.appLaunch();
+		 appLaunch();
 		 ChildsInformation lg = new ChildsInformation(driver);
 		 lg.fname.click();
 		 Thread.sleep(4000);
@@ -88,8 +90,7 @@ public class ChildFormTest extends Base1 {
 		 @Test
 			public void verifyLastName() throws InterruptedException, IOException
 			{
-				 ChildFormTest u=new ChildFormTest();
-		         u.appLaunch();
+				 appLaunch();
 				 ChildsInformation lg = new ChildsInformation(driver);
 				 lg.lastname.click();
 				 Thread.sleep(4000);
@@ -115,8 +116,7 @@ public class ChildFormTest extends Base1 {
 	     @Test
 	     public void verifyDateOfBirthMM() throws IOException, InterruptedException
 	     {
-	    	 ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
+	    	 appLaunch();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 lg.birth_mm.click();
 			 Thread.sleep(4000);
@@ -140,8 +140,7 @@ public class ChildFormTest extends Base1 {
 	     @Test
 	     public void verifyDateOfBirthDD() throws IOException, InterruptedException
 	     {
-	    	 ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
+	    	 appLaunch();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 lg.birth_dd.click();
 			 Thread.sleep(4000);
@@ -166,8 +165,7 @@ public class ChildFormTest extends Base1 {
 	     @Test
 	     public void verifyDateOfBirthYY() throws IOException, InterruptedException
 	     {
-	    	 ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
+	    	 appLaunch();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 lg.birth_yy.click();
 			 Thread.sleep(4000);
@@ -192,8 +190,7 @@ public class ChildFormTest extends Base1 {
 		 @Test
 			public void verifyGenderButton() throws InterruptedException, IOException
 			{
-				 ChildFormTest u=new ChildFormTest();
-		         u.appLaunch();
+				 appLaunch();
 				 ChildsInformation lg = new ChildsInformation(driver);
 				String m= lg.genderDropDown().getText();
 				if(m.contains("Male"))
@@ -214,8 +211,7 @@ public class ChildFormTest extends Base1 {
 				 @Test
 			public void verifyCitizenshipButton() throws InterruptedException, IOException
 			{
-				 ChildFormTest u=new ChildFormTest();
-		         u.appLaunch();
+				 appLaunch();
 				 ChildsInformation lg = new ChildsInformation(driver);
 				String m= lg.citizenshipDropDown().getText();
 				if(m.contains("Citizenship"))
@@ -252,8 +248,7 @@ public class ChildFormTest extends Base1 {
 	   @Test
 	   public void verifyEthnicitydropdown() throws IOException, InterruptedException
 	   {
-		    ChildFormTest u=new ChildFormTest();
-		    u.appLaunch();
+		    appLaunch();
 			ChildsInformation lg = new ChildsInformation(driver);
 			String m= lg.ethnicityDropDown().getText();
 			if(m.contains("Ethnicity"))
@@ -289,8 +284,7 @@ public class ChildFormTest extends Base1 {
 	    @Test
 	    public void verifyChildLiveWithDropDown() throws IOException, InterruptedException
 	    {
-	    	 ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
+	    	 appLaunch();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			String m= lg.childLiveWithDropDown().getText();
 			if(m.contains("Mother"))
@@ -320,8 +314,7 @@ public class ChildFormTest extends Base1 {
 	   @Test
 	   public void verifyAttendedPlaySchoolDropDown() throws IOException, InterruptedException
 	   {
-		    ChildFormTest u=new ChildFormTest();
-		    u.appLaunch();
+		    appLaunch();
 			ChildsInformation lg = new ChildsInformation(driver);
 			String m= lg.attendedplayschoolDropDown().getText();
 			if(m.contains("Yes"))
@@ -431,10 +424,8 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyPlaySchoolNameField() throws IOException, InterruptedException
 	{
-		    ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
-		     
-			 ChildsInformation lg = new ChildsInformation(driver);
+		     appLaunch();
+		      ChildsInformation lg = new ChildsInformation(driver);
 			 String d=lg.playschoolnameTextBox().getText();
 			 System.out.println(d);
 			 if(d.contains("Play School Name"))
@@ -457,9 +448,9 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyPlaySchoolAddressField() throws IOException, InterruptedException
 	{
-		     ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
-		     u.scrollTo();
+		     
+		     appLaunch();
+		     scrollTo();
              
 
 			 ChildsInformation lg = new ChildsInformation(driver);
@@ -486,9 +477,9 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyCityOfPlaySchoolField() throws IOException, InterruptedException
 	{
-		     ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
-		     u.scrollTo();
+		     
+		     appLaunch();
+		     scrollTo();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 String d=lg.playschoolcityTextBox().getText();
 			 System.out.println(d);
@@ -513,9 +504,9 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyCountryOfPlaySchoolField() throws IOException, InterruptedException
 	{
-		     ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
-		     u.scrollTo();
+		     
+		     appLaunch();
+		     scrollTo();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 String d=lg.playschoolcountryTextBox().getText();
 			 System.out.println(d);
@@ -540,9 +531,8 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyFromDateField() throws IOException, InterruptedException
 	{
-		     ChildFormTest u=new ChildFormTest();
-		     u.appLaunch();
-		     u.scrollTo();
+		     appLaunch();
+		     scrollTo();
 			 ChildsInformation lg = new ChildsInformation(driver);
 			 String d5=lg.fromDateTagName().getText();
 			 System.out.println(d5);
@@ -599,9 +589,9 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyToDateField() throws IOException, InterruptedException
 	{   
-		ChildFormTest u=new ChildFormTest();
-		u.appLaunch();
-		u.scrollTo();
+
+		appLaunch();
+		scrollTo();
 		ChildsInformation lg = new ChildsInformation(driver);
 		String d5=lg.Todatetagname.getText();
 		System.out.println(d5);
@@ -661,9 +651,22 @@ public class ChildFormTest extends Base1 {
 	@Test
 	public void verifyNextButton() throws IOException, InterruptedException
 	{
-		ChildFormTest u=new ChildFormTest();
-		u.appLaunch();
+		appLaunch();
 		ChildsInformation lg = new ChildsInformation(driver);
+		
+		lg.firstName().sendKeys("Ak1");
+		lg.lastname.sendKeys("test");
+		lg.birth_mm.sendKeys("02");
+		lg.birth_dd.sendKeys("24");
+		lg.birth_yy.sendKeys("2010");
+		lg.citizenshipdropdown.click();
+		lg.citizenshipvalue1.click();
+		lg.ethnicitydropdown.click();
+		SelectYourEthncityPage sl=new SelectYourEthncityPage(driver);
+		sl.ethnicityvalue.get(0).click();
+		sl.selectandcontinuebtn.click();
+		lg.attendedplayschool.click();
+		lg.attendedplayschool1.click();
 		String s=lg.NextStep.getText();
 		System.out.println(s);
 		if(s.contains("Next Step"))
@@ -671,20 +674,111 @@ public class ChildFormTest extends Base1 {
 			System.out.println("Next Step name is visible");
 		}
 		lg.NextStep.click();
+		
+		String s1 = lg.childformpopup.getText();
+		
+		if(s1.contains("Child profile saved successfully."))
+		{
 		System.out.println("Next Step button is clickable");
+		}
 		
 	}
+	
+	@Test
+	public void verifyOkButtonofPopup() throws IOException, InterruptedException
+	{
+		appLaunch();
+		ChildsInformation lg = new ChildsInformation(driver);
+		lg.firstName().sendKeys("Ak2");
+		lg.lastname.sendKeys("test");
+		lg.birth_mm.sendKeys("02");
+		lg.birth_dd.sendKeys("24");
+		lg.birth_yy.sendKeys("2010");
+		lg.citizenshipdropdown.click();
+		lg.citizenshipvalue1.click();
+		lg.ethnicitydropdown.click();
+		SelectYourEthncityPage sl=new SelectYourEthncityPage(driver);
+		sl.ethnicityvalue.get(0).click();
+		sl.selectandcontinuebtn.click();
+		lg.attendedplayschool.click();
+		lg.attendedplayschool1.click();
+		lg.NextStep.click();
+		lg.childformpopupok.click();
+		ParentInformationPage p = new ParentInformationPage(driver);
+		String s=p.ParentInformationTitle.getText();
+		if(s.contains("Enter\nParent's Information!"))
+		{
+			System.out.println("OK button is working fine");
+		}
+	}
 	 
-	public void appLaunch() throws IOException, InterruptedException
+	
+	@Test
+	public void verifyZcasToolBarText() throws IOException, InterruptedException
+	{
+		appLaunch();
+		ChildsInformation pg = new ChildsInformation(driver);
+		String actual=pg.zcastoolbartext.getText();
+		String expected="ZCAS";
+		System.out.println(actual);
+		Assert.assertEquals(actual, expected);
+		System.out.println("Zcas tool bar text is correct");
+		
+	}*/
+	@Test
+	public void verifySaveBtn() throws IOException, InterruptedException
+	{
+		driver =capabilities("zamitApp");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		HomePage1 btnk= new HomePage1(driver);
+		btnk.letsBegin().click();
+		Thread.sleep(10000);
+		SelectYourChildProfile pg = new SelectYourChildProfile(driver);
+		pg.childList.get(7).click();
+		pg.continueBtn().click();
+		Thread.sleep(4000);
+		ChildsInformation cg = new ChildsInformation(driver);
+		cg.saveexit.click();
+		SaveMyAppPage ap=new SaveMyAppPage(driver);
+		if(ap.pageHeader.isDisplayed())
+		{
+			System.out.println("Save button is working fine");
+		}
+		else
+		{
+			System.out.println("Save button is not working fine");
+		}
+		
+		
+	}
+	@Test
+	public void verifyToolBarStepText() throws IOException, InterruptedException
+	{
+		appLaunch();
+		ChildsInformation pg = new ChildsInformation(driver);
+		String actual=pg.toolbarsteptext.getText();
+		String expected="Step 1 of 4";
+		System.out.println(actual);
+		Assert.assertEquals(actual, expected);
+		System.out.println("Tool bar Step text is correct");
+		
+	}
+	
+		
+	public static void appLaunch() throws IOException, InterruptedException
 	{
 		driver =capabilities("zamitApp");
 	     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 HomePage1 btnk= new HomePage1(driver);
 		 btnk.letsBegin().click();
+		 Thread.sleep(10000);
+		 ChildsInformation lg = new ChildsInformation(driver);
+		 lg.createnewprofile.click();
+		 Thread.sleep(4000);
 		 
 	}
 	
-	public void scrollTo()
+	public static void scrollTo()
 	{
 		 MobileElement el = (MobileElement) driver
 				    .findElementByAndroidUIAutomator("new UiScrollable("

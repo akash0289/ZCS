@@ -92,6 +92,8 @@ public static boolean checkIfServerIsRunning(int port) {
    		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
    		cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
    		cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
+   		//cap.setCapability(MobileCapabilityType.SUPPORTS_JAVASCRIPT, true);
+   		
    		//cap.setCapability("appPackage", "com.todoist");//for incorrect package and activity.
    		//cap.setCapability("appActivity","com.todoist.activity.HomeActivity");
    		

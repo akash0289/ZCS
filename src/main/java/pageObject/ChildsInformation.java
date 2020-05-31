@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.AppiumDriver;
@@ -16,16 +18,24 @@ public class ChildsInformation {
 	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
+	//ZCAS tool bar
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='ZCAS']")
+	public WebElement zcastoolbartext;
+			
+	//Step text tool bar
+	@AndroidFindBy(id="com.zcas:id/txt_toolbar_step")
+	public WebElement toolbarsteptext;
+	
 	//child's information page back button
 	@AndroidFindBy(id="com.zcas:id/iv_toolbar_back")
 	public WebElement backbtn;
 	
-	//child's information page back button
+	//child's information save button
 	@AndroidFindBy(id="com.zcas:id/txt_toolbar_save_exit")
 	public WebElement saveexit;
 	
 	//Form heading
-	@AndroidFindBy(id="com.zcas:id/textView")
+	@AndroidFindBy(id="com.zcas:id/tvHead")
 	public WebElement formHeading;
 	
 	//first name
@@ -70,17 +80,8 @@ public class ChildsInformation {
 	public WebElement citizenshipvalue3;
 	
 	//ethnicity dropdown 
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Ethnicity']")
+	@AndroidFindBy(id="com.zcas:id/tvEthnicity")
 	public WebElement ethnicitydropdown;
-	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='India']")
-	public WebElement ethnicitydropdown1;
-	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Others']")
-	public WebElement ethnicitydropdown2;
-	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='UK']")
-	public WebElement ethnicitydropdown3;
 	
 	//child live with
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Mother']")
@@ -151,7 +152,17 @@ public class ChildsInformation {
 	@AndroidFindBy(id="com.zcas:id/btn_next_step")
 	public WebElement NextStep;
 	
+	//Child form saved successfully pop-up text
+	@AndroidFindBy(id="android:id/message")
+	public WebElement childformpopup;
 	
+	//Child form saved successfully pop-up Ok button
+	@AndroidFindBy(id="android:id/button1")
+	public WebElement childformpopupok;
+	
+	//Create profile button
+	@AndroidFindBy(id="com.zcas:id/btnCreateProfile")
+	public WebElement createnewprofile ;
 	
 	
 	

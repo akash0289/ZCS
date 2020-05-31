@@ -32,12 +32,12 @@ public class Utilities1 extends Base1 {
 			         el.click();
 		}
 		
-		public void childInformationCommon() throws IOException, InterruptedException
+		public void appLaunch() throws IOException, InterruptedException
 		{
 			driver =capabilities("zamitApp");
 		     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			 HomePage1 btnk= new HomePage1(driver);
-			 btnk.letsBegin().click();
+			 //HomePage1 btnk= new HomePage1(driver);
+			 //btnk.letsBegin().click();
 			 
 		}
 		

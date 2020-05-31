@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -21,6 +23,14 @@ public class SelectYourEthncityPage {
 	//child's information page back button
 	@AndroidFindBy(id="com.zcas:id/et_search")
 	public WebElement searchbox;
+	
+	//ethncity value
+	@AndroidFindBy(className="android.widget.RadioButton")
+	public List<AndroidElement> ethnicityvalue;
+	
+	//select and continue btn
+	@AndroidFindBy(id="com.zcas:id/btn_next_step")
+	public WebElement selectandcontinuebtn;
 	
 	
 	public WebElement searchBox() {
