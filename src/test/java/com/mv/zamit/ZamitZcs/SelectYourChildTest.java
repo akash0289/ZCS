@@ -17,8 +17,10 @@ import com.google.common.collect.ImmutableList;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import pageObject.ChildsInformation;
 import pageObject.HomePage1;
 import pageObject.KnowMoreLinkPage;
+import pageObject.SaveMyAppPage;
 import pageObject.SelectYourChildProfile;
 
 public class SelectYourChildTest extends Base1 {
@@ -54,6 +56,74 @@ public class SelectYourChildTest extends Base1 {
 		   
 		     }*/
 	   @Test
+		public void verifyZcasToolBarText() throws IOException, InterruptedException
+		{
+			appLaunch();
+			SelectYourChildProfile pg=new SelectYourChildProfile(driver);
+			String actual=pg.zcastoolbartext.getText();
+			String expected="ZCAS";
+			System.out.println(actual);
+			Assert.assertEquals(actual, expected);
+			System.out.println("Zcas tool bar text is correct");
+			
+		}
+		@Test
+		public void verifyToolBarStepText() throws IOException, InterruptedException
+		{
+			appLaunch();
+			SelectYourChildProfile pg=new SelectYourChildProfile(driver);
+			String actual=pg.toolbarsteptext.getText();
+			String expected="Step 1 of 4";
+			System.out.println(actual);
+			Assert.assertEquals(actual, expected);
+			System.out.println("Tool bar Step text is correct");
+			
+		}
+		
+		@Test
+		public void verifyBackBtn() throws IOException, InterruptedException
+		{
+			appLaunch();
+			SelectYourChildProfile pg=new SelectYourChildProfile(driver);
+			pg.backBtn.click();
+			HomePage1 ch=new HomePage1(driver);
+			if(ch.letsbeginbtn.isDisplayed())
+			{
+				System.out.println("Back button is working fine");
+			}
+			else
+			{
+				System.out.println("Back button is not working fine");
+			}
+		}
+		
+		
+		
+		@Test
+		public void verifyPageTitle() throws IOException, InterruptedException
+		{
+			appLaunch();
+			SelectYourChildProfile pg=new SelectYourChildProfile(driver);
+			String actual=pg.pageTitle.getText();
+			System.out.println(actual);
+			String expected="Select your Child's Profile";
+			Assert.assertEquals(actual, expected);
+			System.out.println("Display String is :"+actual);
+		}
+		@Test
+		public void verifyPagedescription() throws IOException, InterruptedException
+		{
+			appLaunch();
+			SelectYourChildProfile pg=new SelectYourChildProfile(driver);
+			String actual=pg.pagedescription.getText();
+			System.out.println(actual);
+			String expected="You can select your child's profile to view his/her ZCAS application status or create a new profile and start a new ZCAS application.";
+			Assert.assertEquals(actual, expected);
+			System.out.println("Display String is :"+actual);
+		}
+	   
+	   
+	   @Test
 	   public void verifyCreateProfileBtn() throws IOException, InterruptedException
 	   {
 		   appLaunch();
@@ -84,7 +154,19 @@ public class SelectYourChildTest extends Base1 {
 		   appLaunch();
 		   Thread.sleep(4000);
 		   SelectYourChildProfile u=new SelectYourChildProfile(driver);
-		   
+		   u.childList.get(7).click();
+		   u.Continuebtn.click();
+		   ChildsInformation k=new ChildsInformation(driver);
+		   String t=k.formHeadingText().getText();
+			  System.out.println(t);
+			  if(t.contains("Enter AkaTesttt`s Information"))
+			  {
+				  System.out.println("Continue button is working fine: "+t);
+			  }
+			  else
+			  {
+				  System.out.println("Continue button is not working fine: "+t);
+			  }
 	   }
 
 	

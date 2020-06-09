@@ -2,6 +2,13 @@ package com.mv.zamit.ZamitZcs;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,13 +26,20 @@ import pageObject.ParentInformationPage;
 import pageObject.SaveMyAppPage;
 import pageObject.SelectYourChildProfile;
 import pageObject.UploadDocPage;
+import com.google.common.base.Function;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UploadDocTest extends Base1 {
 	
 	public static AndroidDriver<AndroidElement> driver;
 	
+	WebElement waitElement = null;
+	 
 	
-    
 	 
 	@BeforeMethod
 	public void startServer1()
@@ -35,7 +49,7 @@ public class UploadDocTest extends Base1 {
 	
 	
 	
-	/*@Test
+	@Test
 	public void verifyZcasToolBarText() throws IOException, InterruptedException
 	{
 		appLaunch();
@@ -58,9 +72,9 @@ public class UploadDocTest extends Base1 {
 		Assert.assertEquals(actual, expected);
 		System.out.println("Tool bar Step text is correct");
 		
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void verifyBackBtn() throws IOException, InterruptedException
 	{
 		appLaunch();
@@ -185,21 +199,37 @@ public class UploadDocTest extends Base1 {
 		Assert.assertEquals(actual, expected);
 		//Verify birth certificate click options
 		}
-	*/
-	@Test
+	
+	/*@Test
 	public void verifyResidanceDocText() throws IOException, InterruptedException
 	{
 		appLaunch();
 		UploadDocPage pg=new UploadDocPage(driver);
-		
-		
+		pg.childPhotograph.click();
+		By webView = By.className("android.view.ViewGroup");
+	    WebDriverWait wait = new WebDriverWait(driver,400);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(webView));
+		GalleryCameraOptPage g=new GalleryCameraOptPage(driver);
+		g.galleryoption.click();
+		Thread.sleep(4000);
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.ListView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView").click();
+		Thread.sleep(3000);
+		driver.findElementByXPath("//android.widget.LinearLayout[@content-desc=\"1486888-student-png-png-of-a-girl-student-1017_1030_preview.png, 864 kB, May 29\"]/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.ImageView").click();
+		Thread.sleep(3000);
+		driver.findElementById("com.zcas:id/crop_image_menu_crop").click();
+		By popup = By.className("android.widget.LinearLayout");
+	    WebDriverWait wait1 = new WebDriverWait(driver,1400);
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(popup));
+		driver.findElementById("android:id/button1").click();
+		Thread.sleep(5000);
 		//Verify Name of certificates
 		String actual=pg.residenceDocument.getText();
 		System.out.println("Certificate name is: "+actual);
 		String expected="Proof of Residence\nDocument";
 		Assert.assertEquals(actual, expected);
 		//Verify birth certificate click options
-		}
+		
+	}*/
 	
 	public static void appLaunch() throws IOException, InterruptedException
 	{

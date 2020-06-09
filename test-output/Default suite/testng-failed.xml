@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mv.zamit.ZamitZcs.NotSureTest">
+      <class name="com.mv.zamit.ZamitZcs.ChildFormTest">
         <methods>
           <include name="killAllNodes"/>
+          <include name="verifySaveButtonText"/>
           <include name="stopServer"/>
-          <include name="verifyCloseBtn"/>
           <include name="startServer1"/>
         </methods>
-      </class> <!-- com.mv.zamit.ZamitZcs.NotSureTest -->
+      </class> <!-- com.mv.zamit.ZamitZcs.ChildFormTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

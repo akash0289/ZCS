@@ -39,7 +39,7 @@ public class HomeTest1 extends Base1
 	
 	  
 	
-	  /* @Test
+	  @Test
 	   public void verifyImageIcon() throws IOException, InterruptedException
 	   {
 
@@ -213,7 +213,7 @@ public class HomeTest1 extends Base1
 		 Assert.assertEquals(actual, expected);
 		 System.out.println("Know more link working fine");
 		 
-	 }*/
+	 }
 	 @Test
 	   public void verifyKnowMoreScreenText() throws IOException, InterruptedException
 	   {
@@ -257,6 +257,14 @@ public class HomeTest1 extends Base1
 		 HomePage1 btnk= new HomePage1(driver);
 		 btnk.knowMorelink().click();
 		 btnk.closeButton().click();
+		 if(btnk.letsbeginbtn.isDisplayed())
+		 {
+			 System.out.println("Close button is working fine");
+		 }
+		 else
+		 {
+			 System.out.println("Close button is not working fine");
+		 }
 		 
 	 }
 	   

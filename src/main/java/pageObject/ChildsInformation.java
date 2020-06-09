@@ -59,12 +59,16 @@ public class ChildsInformation {
 	public WebElement birth_yy;
 	
 	//gender dropdown
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Male']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Gender']")
 	public WebElement genderdropdown;
+		
+	//gender dropdown
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Male']")
+	public WebElement genderdropdownMale;
 	
 	//for female selection
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Female']")
-	public WebElement genderdropdown1;
+	public WebElement genderdropdownFemale;
 	
 	//citizenship drop down
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Citizenship']")
@@ -84,21 +88,29 @@ public class ChildsInformation {
 	public WebElement ethnicitydropdown;
 	
 	//child live with
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Mother']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Child Live With']")
 	public WebElement childlivewith;
 	
+	//child live with
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Mother']")
+	public WebElement childlivewithM;
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Father']")
-	public WebElement childlivewith1;
+	public WebElement childlivewithF;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Both Parents']")
-	public WebElement childlivewith2;
+	public WebElement childlivewithB;
+	
+	//Attended Play School
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Attended Play School']")
+	public WebElement attendedplayschool;
 	
 	//Attended Play School
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Yes']")
-	public WebElement attendedplayschool;
+	public WebElement attendedplayschoolY;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='No']")
-	public WebElement attendedplayschool1;
+	public WebElement attendedplayschoolN;
 	
 	//edit box play school name
 	@AndroidFindBy(id="com.zcas:id/et_play_school_name")
@@ -206,7 +218,7 @@ public class ChildsInformation {
 	public WebElement femaleSelect()
 	{
 		System.out.println("Female option");
-		return genderdropdown1;
+		return genderdropdownFemale;
 	}
 	
 	public WebElement citizenshipDropDown()

@@ -21,7 +21,7 @@ public class GalleryCameraOptPage {
 		public WebElement closebtngalleryCamera;
 		
 		//Gallery options
-		@AndroidFindBy(xpath="//android.widget.FrameLayout//android.widget.TextView[@text='Upload from Gallery']")
+		@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[1]/android.widget.TextView")
 		public WebElement galleryoption;
 		
 		//Gallery image

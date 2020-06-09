@@ -3,7 +3,14 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.mv.zamit.ZamitZcs.AppTest"/>
+      <class name="com.mv.zamit.ZamitZcs.HomeTest1"/>
+      <class name="com.mv.zamit.ZamitZcs.ChildFormTest"/>
+      <class name="com.mv.zamit.ZamitZcs.ParentFormTest"/>
+      <class name="com.mv.zamit.ZamitZcs.UploadDocTest"/>
+      <class name="com.mv.zamit.ZamitZcs.NotSureTest"/>
+      <class name="com.mv.zamit.ZamitZcs.GuidelinesUploadDocTest"/>
+      <class name="com.mv.zamit.ZamitZcs.SaveMyAppTest"/>
+      <class name="com.mv.zamit.ZamitZcs.SelectYourChildTest"/>
     </classes>
   </test> 
 </suite> 

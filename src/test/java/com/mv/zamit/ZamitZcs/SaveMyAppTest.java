@@ -32,7 +32,7 @@ public class SaveMyAppTest extends Base1 {
 	}
 	
 	
-	/*@Test
+	@Test
 	public void verifyHeader() throws IOException, InterruptedException
 	{
 		appLaunch();
@@ -52,7 +52,7 @@ public class SaveMyAppTest extends Base1 {
 		String expected="In case you want to save your application as draft and want to continue later, we will save your entered data and you continue the process anytime.";
 		Assert.assertEquals(actual, expected);
 		System.out.println("Page text is :"+actual);
-	}*/
+	}
 	
 	@Test
 	public void verifySaveMyAppBtn() throws IOException, InterruptedException

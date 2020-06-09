@@ -19,6 +19,26 @@ public class SelectYourChildProfile {
 	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
+	    //ZCAS tool bar
+        @AndroidFindBy(xpath="//android.widget.TextView[@text='ZCAS']")
+        public WebElement zcastoolbartext;
+
+        //Step text tool bar
+	    @AndroidFindBy(id="com.zcas:id/txt_toolbar_step")
+	    public WebElement toolbarsteptext;
+	
+	    //back button
+	    @AndroidFindBy(id="com.zcas:id/iv_toolbar_back")
+	    public WebElement backBtn;
+			
+	   //Page Title
+	   @AndroidFindBy(id="com.zcas:id/txtSelect")
+	    public WebElement pageTitle;
+	   
+	 //Page description
+	   @AndroidFindBy(id="com.zcas:id/txtProfileDis")
+	    public WebElement pagedescription;
+	   
 	    //Create New Profile
 	    @AndroidFindBy(className="android.widget.RadioButton")
 	    public List<WebElement> childList;

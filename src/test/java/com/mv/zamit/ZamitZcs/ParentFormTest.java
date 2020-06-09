@@ -43,7 +43,7 @@ public class ParentFormTest extends Base1 {
 	}
 	
 	
-	/*@Test
+	@Test
 	public void verifyPageTitle() throws IOException, InterruptedException
 	{
 		appLaunch();
@@ -59,9 +59,9 @@ public class ParentFormTest extends Base1 {
 		}
 		
 		
-		}*/
+		}
 	
-	/*@Test
+    @Test
 	public void verifyFirstName() throws InterruptedException, IOException
 	{
 		appLaunch();
@@ -161,9 +161,9 @@ public class ParentFormTest extends Base1 {
 		 if(d.contains("8765432198")) {
 			 System.out.println(d+" is visible");
 		 }
-	}*/
+	}
 
-	/*@Test
+	@Test
 	public void verifyEmploymentDropdown() throws InterruptedException, IOException
 	{
 		appLaunch();
@@ -371,7 +371,7 @@ public class ParentFormTest extends Base1 {
 		{
 			System.out.println("Save button is not working fine");
 		}
-	}*/
+	}
 	
 	@Test
 	public void verifyBackBtn() throws IOException, InterruptedException
@@ -390,7 +390,7 @@ public class ParentFormTest extends Base1 {
 		}
 	}
 	
-	/*@Test
+	@Test
 	public void verifyZcasToolBarText() throws IOException, InterruptedException
 	{
 		appLaunch();
@@ -435,7 +435,7 @@ public class ParentFormTest extends Base1 {
 		{
 			System.out.println("Ok button is not working fine and page title: "+up);
 		}
-	}*/
+	}
 	
 	
 	
